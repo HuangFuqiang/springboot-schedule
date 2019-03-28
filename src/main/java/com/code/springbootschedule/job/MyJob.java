@@ -32,4 +32,10 @@ public class MyJob {
         logger.info(new Date() + " >>fixedDelay执行.... start");
         Thread.sleep(5000L);
     }
+
+    @Scheduled(fixedRate=ONE_MINUTE)
+    public void fixedRateJob() throws InterruptedException {
+        logger.info(new Date() + " >>fixedRateJob执行.... start");
+        Thread.sleep(5000L);
+    }
 }
